@@ -4,13 +4,7 @@ import "rodal/lib/rodal.css";
 import Rodal from "rodal";
 import { useRouter } from "next/router";
 
-interface prop {
-  end: boolean;
-  data: any;
-  word: String;
-}
-
-function Row(props: prop | undefined) {
+function Row(props: any) {
   const router = useRouter();
   const [clr, setClr] = useState<any | undefined>([]);
   const [win, setWin] = useState<boolean>(true);

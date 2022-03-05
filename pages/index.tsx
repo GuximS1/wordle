@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     setRandom(words[Math.floor(Math.random() * words.length)]);
   }, []);
 
-  const [word, setWord] = useState<Array<string> | undefined>([]);
+  const [word, setWord] = useState<any | undefined>([]);
 
   function keyPressHandler(button: String) {
     if (button === "{bksp}") {
@@ -38,12 +38,12 @@ const Home: NextPage = () => {
     <div>
       <h1 className={classes.title}>Wordle </h1>
       <div className={classes.space}></div>
-      <Row end={false} data={word?.slice(0, 5)} word={random} />
-      <Row end={false} data={word?.slice(5, 10)} word={random} />
-      <Row end={false} data={word?.slice(10, 15)} word={random} />
-      <Row end={false} data={word?.slice(15, 20)} word={random} />
-      <Row end={false} data={word?.slice(20, 25)} word={random} />
-      <Row end={true} data={word?.slice(25, 30)} word={random} />
+      <Row end={false} data={word.slice(0, 5)} word={random} />
+      <Row end={false} data={word.slice(5, 10)} word={random} />
+      <Row end={false} data={word.slice(10, 15)} word={random} />
+      <Row end={false} data={word.slice(15, 20)} word={random} />
+      <Row end={false} data={word.slice(20, 25)} word={random} />
+      <Row end={true} data={word.slice(25, 30)} word={random} />
       <div className={classes.keyboardPosition}>
         <div className={classes.keyboard}>
           <Keyboard onKeyPress={keyPressHandler} />
