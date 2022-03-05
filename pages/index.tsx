@@ -5,7 +5,7 @@ import classes from "../styles/Main.module.scss";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import { useEffect, useState } from "react";
-import Row from "./Row";
+import Row from "../components/Row";
 const Home: NextPage = () => {
   const [random, setRandom] = useState<String>("");
   useEffect(() => {
